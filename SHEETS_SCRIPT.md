@@ -6,7 +6,7 @@ This document contains the Google Apps Script code and step-by-step instructions
 
 1. **Create a Spreadsheet**:
    - Go to [sheets.new](https://sheets.new) to create a new Google Sheet.
-   - Give it a name (e.g., *Alice Sleepover RSVP*).
+   - Give it a name (e.g., _Alice Sleepover RSVP_).
    - Copy the Spreadsheet ID from the URL (the part between `/d/` and `/edit`).
 
 2. **Open Apps Script**:
@@ -31,7 +31,7 @@ This document contains the Google Apps Script code and step-by-step instructions
    - Copy the generated **Web app URL** (ends in `/exec`).
    - Open [script.js](file:///workspace/party-site/script.js) and paste the URL as `APPS_SCRIPT_URL`:
      ```javascript
-     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/.../exec';
+     const APPS_SCRIPT_URL = "https://script.google.com/macros/s/.../exec";
      ```
 
 ---
@@ -43,22 +43,22 @@ function doPost(e) {
   try {
     var jsonString = e.postData.contents;
     var data = JSON.parse(jsonString);
-    
+
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    
+
     // Initialize headers if sheet is empty
     if (sheet.getLastRow() === 0) {
       sheet.appendRow([
-        "Tidsstämpel", 
-        "Namn", 
-        "Pizza Toppings", 
-        "Frukostönskemål", 
-        "Allergier / Specialkost", 
+        "Tidsstämpel",
+        "Namn",
+        "Pizza Toppings",
+        "Frukostönskemål",
+        "Allergier / Specialkost",
         "Hälsning / Övrigt"
       ]);
       sheet.getRange(1, 1, 1, 6).setFontWeight("bold").setBackground("#fef3c7");
     }
-    
+
     // Append RSVP row
     sheet.appendRow([
       data.timestamp || new Date().toISOString(),
@@ -68,12 +68,14 @@ function doPost(e) {
       data.allergies || "Inga",
       data.message || data.notes || ""
     ]);
-    
-    return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
-      .setMimeType(ContentService.MimeType.JSON);
+
+    return ContentService.createTextOutput(JSON.stringify({ result: "success" })).setMimeType(
+      ContentService.MimeType.JSON
+    );
   } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({ "result": "error", "error": error.toString() }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput(
+      JSON.stringify({ result: "error", error: error.toString() })
+    ).setMimeType(ContentService.MimeType.JSON);
   }
 }
 ```

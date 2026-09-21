@@ -1,15 +1,25 @@
 {
   "name": "event-invite",
   "version": "1.0.0",
+  "type": "module",
   "description": "En modern och interaktiv inbjudningssida för Alices Sleepover & Pizzakväll.",
   "main": "index.html",
   "scripts": {
     "dev": "npx http-server -p 8080",
-    "deploy": "gh-pages -d ."
+    "deploy": "gh-pages -d .",
+    "lint:css": "stylelint 'styles.css'",
+    "lint:js": "eslint 'script.js'",
+    "lint": "npm run lint:css && npm run lint:js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "dependencies": {},
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
     "gh-pages": "^6.1.1",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "prettier": "^3.9.8",
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
