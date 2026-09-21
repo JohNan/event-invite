@@ -1,4 +1,3 @@
 node_modules/
 .DS_Store
 .jules-config/
-package-lock.json

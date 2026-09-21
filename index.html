@@ -1,401 +1,581 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alices Sleepover — 17–18 Oktober 2026</title>
-  <meta name="description" content="Du är varmt välkommen till Alices Sleepover och pizzakväll! Vi bakar egna pizzor, utmanar varandra i Just Dance och avslutar med filmmys och övernattning den 17–18 oktober.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="styles.css?v=6">
-</head>
-<body>
-  <!-- Ambient refined starlight particles -->
-  <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alices Sleepover — 17–18 Oktober 2026</title>
+    <meta
+      name="description"
+      content="Du är varmt välkommen till Alices Sleepover och pizzakväll! Vi bakar egna pizzor, utmanar varandra i Just Dance och avslutar med filmmys och övernattning den 17–18 oktober."
+    />
 
-  <main class="page-wrapper">
-    
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-image-wrap">
-        <img src="hero-playroom.jpg?v=2" alt="Mysigt lekrum med madrasser på golvet, kuddhav, täcken, gosedjur och TV på väggen för filmmys" class="hero-img">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-title">Sleepover med <em>Alice</em></h1>
-        <p class="hero-subtitle" id="heroSubtitle">Lördag 17 oktober (kl. 17:00) – Söndag 18 oktober (kl. 11:00)</p>
-        <a href="#rsvp" class="hero-cta">OSA här &darr;</a>
-      </div>
-    </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Invitation Body -->
-    <article class="invitation-body">
+    <link rel="stylesheet" href="styles.css?v=6" />
+  </head>
+  <body>
+    <!-- Ambient refined starlight particles -->
+    <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
 
-      <!-- Intro Section -->
-      <section class="intro-section">
-        <div class="divider">
-          <span>✦</span>
-          <span>✧</span>
-          <span>✦</span>
+    <main class="page-wrapper">
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="hero-image-wrap">
+          <img
+            src="hero-playroom.jpg?v=2"
+            alt="Mysigt lekrum med madrasser på golvet, kuddhav, täcken, gosedjur och TV på väggen för filmmys"
+            class="hero-img"
+          />
+          <div class="hero-overlay"></div>
         </div>
-        <p class="intro-text">
-          Vi kickar igång kvällen med att baka egna pizzor, utmanar varandra i Just Dance och avslutar med filmmys och övernattning!
-        </p>
-        <p class="intro-sign">Vi ses! ✦</p>
-        <div class="divider">
-          <span>✦</span>
-          <span>✧</span>
-          <span>✦</span>
+        <div class="hero-content">
+          <h1 class="hero-title">Sleepover med <em>Alice</em></h1>
+          <p class="hero-subtitle" id="heroSubtitle">
+            Lördag 17 oktober (kl. 17:00) – Söndag 18 oktober (kl. 11:00)
+          </p>
+          <a href="#rsvp" class="hero-cta">OSA här &darr;</a>
         </div>
-      </section>
+      </header>
 
-      <!-- Details Grid -->
-      <section class="details-section" aria-label="Tid och plats">
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
+      <!-- Invitation Body -->
+      <article class="invitation-body">
+        <!-- Intro Section -->
+        <section class="intro-section">
+          <div class="divider">
+            <span>✦</span>
+            <span>✧</span>
+            <span>✦</span>
           </div>
-          <div class="detail-text">
-            <h3>När</h3>
-            <p id="detailsDate">Lördag 17 – Söndag 18 Okt</p>
-            <p class="detail-sub" id="detailsTime">Kl. 17:00 (lör) – 11:00 (sön)</p>
+          <p class="intro-text">
+            Vi kickar igång kvällen med att baka egna pizzor, utmanar varandra i Just Dance och
+            avslutar med filmmys och övernattning!
+          </p>
+          <p class="intro-sign">Vi ses! ✦</p>
+          <div class="divider">
+            <span>✦</span>
+            <span>✧</span>
+            <span>✦</span>
           </div>
-        </div>
+        </section>
 
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </div>
-          <div class="detail-text">
-            <h3>Var</h3>
-            <p>Hemma hos Alice</p>
-            <p class="detail-sub" id="detailsAddress">Kvarnbogatan 36, Uppsala</p>
-          </div>
-        </div>
-
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 12h8"></path>
-              <path d="M12 8v8"></path>
-            </svg>
-          </div>
-          <div class="detail-text">
-            <h3>Mat &amp; Frukost</h3>
-            <p>Hemgjord Pizza &amp; Frukost</p>
-            <p class="detail-sub">Egna toppings &amp; mysmorgon</p>
-          </div>
-        </div>
-
-        <div class="detail-item">
-          <div class="detail-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-          </div>
-          <div class="detail-text">
-            <h3>O.S.A.</h3>
-            <p id="detailsRsvpDeadline">Senast 10 Oktober</p>
-            <p class="detail-sub">Svara i formuläret nedan</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Program / Highlights Section -->
-      <section class="program-section">
-        <h2 class="section-heading">Kvällens Höjdpunkter</h2>
-        <div class="program-grid">
-          <div class="program-card">
-            <div class="program-time">17:00</div>
-            <div class="program-badge">Pizzabakning</div>
-            <h3>Vi bakar egna pizzor</h3>
-            <p>Vi rullar ut deg, breder tomatsås och toppar med alla våra favoritingredienser innan de gräddas frasiga i ugnen!</p>
-          </div>
-          <div class="program-card">
-            <div class="program-time">19:00</div>
-            <div class="program-badge">Just Dance</div>
-            <h3>Dansutmaning &amp; skratt</h3>
-            <p>Vi drar igång Just Dance på storskärm och utmanar varandra i härliga dansmoves och favoritlåtar.</p>
-          </div>
-          <div class="program-card">
-            <div class="program-time">20:30</div>
-            <div class="program-badge">Filmmys</div>
-            <h3>Kuddhav &amp; Pyjamas</h3>
-            <p>Kryp ner bland täcken, kuddar och gosedjur med varma popcorn och en mysig film innan vi sover över.</p>
-          </div>
-          <div class="program-card">
-            <div class="program-time">09:00</div>
-            <div class="program-badge">Frukostmys</div>
-            <h3>Gemensam lyxfrukost</h3>
-            <p>Vi startar söndagen tillsammans i lugn och ro med favoritfrukost innan vi säger hejdå kl. 11:00.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Packlista Section (Interactive with elegant SVG icons) -->
-      <section class="packing-section" id="packlista">
-        <h2 class="section-heading">Packlista</h2>
-        <p class="packing-lead">Allt du behöver för en bekväm sleepover (kryssa i när du packat ner det):</p>
-        <div class="packing-checklist" id="packingChecklist">
-          <label class="packing-item">
-            <input type="checkbox" data-item="bedding">
-            <span class="custom-checkbox"></span>
-            <span class="packing-svg" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 9V19M22 9V19M2 14H22M2 11C2 9.89543 2.89543 9 4 9H20C21.1046 9 22 9.89543 22 11V14H2V11Z"></path>
-              </svg>
-            </span>
-            <div class="packing-text">
-              <strong>Täcke, kudde och lakan</strong>
-              <small>För en mjuk och skön bäddning i kuddhavet</small>
-            </div>
-          </label>
-          <label class="packing-item">
-            <input type="checkbox" data-item="pajamas">
-            <span class="custom-checkbox"></span>
-            <span class="packing-svg" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10a2 2 0 002 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path>
-              </svg>
-            </span>
-            <div class="packing-text">
-              <strong>Pyjamas &amp; tofflor</strong>
-              <small>Sköna myskläder för dans, film och nattsömn</small>
-            </div>
-          </label>
-          <label class="packing-item">
-            <input type="checkbox" data-item="toy">
-            <span class="custom-checkbox"></span>
-            <span class="packing-svg" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="7"></circle>
-                <circle cx="8" cy="7" r="2.5"></circle>
-                <circle cx="16" cy="7" r="2.5"></circle>
-                <circle cx="9.5" cy="11.5" r="0.8" fill="currentColor"></circle>
-                <circle cx="14.5" cy="11.5" r="0.8" fill="currentColor"></circle>
-                <path d="M10 15c.6.6 1.4 1 2 1s1.4-.4 2-1"></path>
-              </svg>
-            </span>
-            <div class="packing-text">
-              <strong>Gosedjur</strong>
-              <small>Alice vill gärna att ditt favoritgosedjur hänger med</small>
-            </div>
-          </label>
-          <label class="packing-item">
-            <input type="checkbox" data-item="bottle">
-            <span class="custom-checkbox"></span>
-            <span class="packing-svg" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 2h4v3h-4zM8 5h8a2 2 0 012 2v13a2 2 0 01-2 2H8a2 2 0 01-2-2V7a2 2 0 012-2z"></path>
-                <line x1="6" y1="12" x2="18" y2="12"></line>
-              </svg>
-            </span>
-            <div class="packing-text">
-              <strong>Vattenflaska</strong>
-              <small>Smidigt att ha vid bädden och under kvällen</small>
-            </div>
-          </label>
-          <label class="packing-item">
-            <input type="checkbox" data-item="toiletries">
-            <span class="custom-checkbox"></span>
-            <span class="packing-svg" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2l4 4-14 14H4v-4L18 2z"></path>
-                <circle cx="18" cy="6" r="1.5"></circle>
-              </svg>
-            </span>
-            <div class="packing-text">
-              <strong>Tandborste &amp; necessär</strong>
-              <small>Tandborste, tandkräm och eventuella kvällsgrejer</small>
-            </div>
-          </label>
-        </div>
-        <p class="packing-counter" id="packingProgress">Packat: 0 av 5 saker</p>
-      </section>
-
-      <!-- Countdown -->
-      <section class="countdown-section">
-        <h2 class="section-heading">Sleepovern börjar om</h2>
-        <div class="countdown-grid" id="countdownTimer">
-          <div class="countdown-block">
-            <span class="count-num" id="days">00</span>
-            <span class="count-label">dagar</span>
-          </div>
-          <span class="count-sep">·</span>
-          <div class="countdown-block">
-            <span class="count-num" id="hours">00</span>
-            <span class="count-label">timmar</span>
-          </div>
-          <span class="count-sep">·</span>
-          <div class="countdown-block">
-            <span class="count-num" id="minutes">00</span>
-            <span class="count-label">minuter</span>
-          </div>
-          <span class="count-sep">·</span>
-          <div class="countdown-block">
-            <span class="count-num" id="seconds">00</span>
-            <span class="count-label">sekunder</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Weather / Autumn Atmosphere -->
-      <section class="weather-section">
-        <h2 class="section-heading">Höstmyset</h2>
-        <div class="weather-card">
-          <div class="weather-left">
-            <div class="weather-moon">
-              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="moon-svg" aria-hidden="true">
-                <path d="M50 14 C30 14 16 28 16 48 C16 66 30 76 48 76 C55 76 61 74 66 70 C52 68 42 56 42 42 C42 28 50 18 64 15 C60 14 55 14 50 14 Z" fill="#facc15" opacity="0.95"/>
-                <circle cx="28" cy="22" r="1.5" fill="#fff" opacity="0.8" class="star-sparkle"/>
-                <circle cx="62" cy="32" r="1.2" fill="#fff" opacity="0.7" class="star-sparkle"/>
-                <circle cx="58" cy="62" r="1.8" fill="#fff" opacity="0.9" class="star-sparkle"/>
+        <!-- Details Grid -->
+        <section class="details-section" aria-label="Tid och plats">
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
             </div>
-            <div class="weather-temp-wrap">
-              <span class="temp">9</span>
-              <span class="temp-deg">°C</span>
-            </div>
-          </div>
-          <div class="weather-right">
-            <p class="weather-desc">Krispig oktoberkväll ute i Uppsala — men varmt, doftande av nygräddad pizza och 22°C pyjamasvärme inne!</p>
-            <div class="weather-pills">
-              <span class="pill">Krispig oktoberkväll</span>
-              <span class="pill">Varm pizzaugn</span>
-              <span class="pill">Inomhusmys &amp; kuddhav</span>
-            </div>
-            <p class="weather-note">Perfekt väder för varma tofflor, täcken och filmmys.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- RSVP Section -->
-      <section class="rsvp-section" id="rsvp">
-        <h2 class="section-heading">Anmäl dig</h2>
-        <p class="rsvp-lead">
-          Svara senast den <strong id="rsvpDeadline">10 oktober</strong> till <span id="rsvpPhone">[Telefonnummer]</span> eller via formuläret nedan så vi hinner förbereda pizzadeg, toppings och frukost.
-        </p>
-
-        <form class="rsvp-form" id="rsvpForm">
-          <div class="field-group">
-            <label for="guestName">Ditt namn *</label>
-            <input type="text" id="guestName" required placeholder="T.ex. Maja Lindström">
-          </div>
-
-          <input type="hidden" id="guestCount" value="1">
-
-          <div class="field-group">
-            <label for="pizzaTopping">Vad vill du ha på din pizza? *</label>
-            <input type="text" id="pizzaTopping" required placeholder="T.ex. Mozzarella, skinka, champinjoner...">
-            <div class="suggestion-chips" id="pizzaChips" aria-label="Förslag på pizzatoppings">
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Mozzarella</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Skinka</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Champinjoner</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Ananas</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Paprika</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Oliver</button>
-              <button type="button" class="chip-btn" data-target="pizzaTopping">Vegansk ost</button>
+            <div class="detail-text">
+              <h3>När</h3>
+              <p id="detailsDate">Lördag 17 – Söndag 18 Okt</p>
+              <p class="detail-sub" id="detailsTime">Kl. 17:00 (lör) – 11:00 (sön)</p>
             </div>
           </div>
 
-          <div class="field-group">
-            <label for="breakfastChoice">Vad äter du helst till frukost? *</label>
-            <input type="text" id="breakfastChoice" required placeholder="T.ex. Pannkakor, rostat bröd, smoothie...">
-            <div class="suggestion-chips" id="breakfastChips" aria-label="Förslag på frukost">
-              <button type="button" class="chip-btn" data-target="breakfastChoice">Pannkakor</button>
-              <button type="button" class="chip-btn" data-target="breakfastChoice">Rostat bröd</button>
-              <button type="button" class="chip-btn" data-target="breakfastChoice">Yoghurt &amp; müsli</button>
-              <button type="button" class="chip-btn" data-target="breakfastChoice">Fruktsallad</button>
-              <button type="button" class="chip-btn" data-target="breakfastChoice">Smoothie</button>
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <h3>Var</h3>
+              <p>Hemma hos Alice</p>
+              <p class="detail-sub" id="detailsAddress">Kvarnbogatan 36, Uppsala</p>
             </div>
           </div>
 
-          <div class="field-group">
-            <label for="guestAllergies">Eventuella allergier eller specialkost</label>
-            <input type="text" id="guestAllergies" placeholder="T.ex. Glutenfritt, laktosfritt, nötallergi, vegetariskt (eller 'Inga')">
-          </div>
-
-          <div class="field-group">
-            <label for="guestMessage">Hälsning till Alice (valfritt)</label>
-            <textarea id="guestMessage" rows="2" placeholder="Önska en låt i Just Dance eller skriv ett meddelande"></textarea>
-          </div>
-
-          <div class="rsvp-error" id="rsvpError" style="display:none">
-            Något gick fel när vi försökte skicka anmälan. Försök igen eller kontakta Alice direkt.
-          </div>
-
-          <button type="submit" class="submit-btn" id="submitBtn">Skicka anmälan</button>
-        </form>
-
-        <div class="success-message" id="successMessage" style="display:none">
-          <div class="success-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-          </div>
-          <h3>Hurra! Du är anmäld!</h3>
-          <p id="successDate">Vi ses lördagen den 17 oktober kl. 17:00 hos Alice!</p>
-          <div class="rsvp-summary" id="rsvpSummary"></div>
-          <button type="button" class="text-btn" id="resetBtn">Ändra mina val</button>
-        </div>
-      </section>
-
-      <!-- Location -->
-      <section class="location-section">
-        <h2 class="section-heading">Hitta hit</h2>
-        <div class="location-card">
-          <div class="map-area">
-            <div class="map-bg"></div>
-            <div class="map-grid-lines"></div>
-            <div class="map-roads">
-              <div class="road road-h"></div>
-              <div class="road road-v"></div>
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12h8"></path>
+                <path d="M12 8v8"></path>
+              </svg>
             </div>
-            <div class="map-marker-wrap">
-              <div class="map-marker-shadow"></div>
-              <div class="map-marker" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#c2410c" width="28" height="28" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3" fill="#ffffff"></circle>
+            <div class="detail-text">
+              <h3>Mat &amp; Frukost</h3>
+              <p>Hemgjord Pizza &amp; Frukost</p>
+              <p class="detail-sub">Egna toppings &amp; mysmorgon</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <h3>O.S.A.</h3>
+              <p id="detailsRsvpDeadline">Senast 10 Oktober</p>
+              <p class="detail-sub">Svara i formuläret nedan</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Program / Highlights Section -->
+        <section class="program-section">
+          <h2 class="section-heading">Kvällens Höjdpunkter</h2>
+          <div class="program-grid">
+            <div class="program-card">
+              <div class="program-time">17:00</div>
+              <div class="program-badge">Pizzabakning</div>
+              <h3>Vi bakar egna pizzor</h3>
+              <p>
+                Vi rullar ut deg, breder tomatsås och toppar med alla våra favoritingredienser innan
+                de gräddas frasiga i ugnen!
+              </p>
+            </div>
+            <div class="program-card">
+              <div class="program-time">19:00</div>
+              <div class="program-badge">Just Dance</div>
+              <h3>Dansutmaning &amp; skratt</h3>
+              <p>
+                Vi drar igång Just Dance på storskärm och utmanar varandra i härliga dansmoves och
+                favoritlåtar.
+              </p>
+            </div>
+            <div class="program-card">
+              <div class="program-time">20:30</div>
+              <div class="program-badge">Filmmys</div>
+              <h3>Kuddhav &amp; Pyjamas</h3>
+              <p>
+                Kryp ner bland täcken, kuddar och gosedjur med varma popcorn och en mysig film innan
+                vi sover över.
+              </p>
+            </div>
+            <div class="program-card">
+              <div class="program-time">09:00</div>
+              <div class="program-badge">Frukostmys</div>
+              <h3>Gemensam lyxfrukost</h3>
+              <p>
+                Vi startar söndagen tillsammans i lugn och ro med favoritfrukost innan vi säger
+                hejdå kl. 11:00.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Packlista Section (Interactive with elegant SVG icons) -->
+        <section class="packing-section" id="packlista">
+          <h2 class="section-heading">Packlista</h2>
+          <p class="packing-lead">
+            Allt du behöver för en bekväm sleepover (kryssa i när du packat ner det):
+          </p>
+          <div class="packing-checklist" id="packingChecklist">
+            <label class="packing-item">
+              <input type="checkbox" data-item="bedding" />
+              <span class="custom-checkbox"></span>
+              <span class="packing-svg" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M2 9V19M22 9V19M2 14H22M2 11C2 9.89543 2.89543 9 4 9H20C21.1046 9 22 9.89543 22 11V14H2V11Z"
+                  ></path>
+                </svg>
+              </span>
+              <div class="packing-text">
+                <strong>Täcke, kudde och lakan</strong>
+                <small>För en mjuk och skön bäddning i kuddhavet</small>
+              </div>
+            </label>
+            <label class="packing-item">
+              <input type="checkbox" data-item="pajamas" />
+              <span class="custom-checkbox"></span>
+              <span class="packing-svg" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10a2 2 0 002 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"
+                  ></path>
+                </svg>
+              </span>
+              <div class="packing-text">
+                <strong>Pyjamas &amp; tofflor</strong>
+                <small>Sköna myskläder för dans, film och nattsömn</small>
+              </div>
+            </label>
+            <label class="packing-item">
+              <input type="checkbox" data-item="toy" />
+              <span class="custom-checkbox"></span>
+              <span class="packing-svg" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="7"></circle>
+                  <circle cx="8" cy="7" r="2.5"></circle>
+                  <circle cx="16" cy="7" r="2.5"></circle>
+                  <circle cx="9.5" cy="11.5" r="0.8" fill="currentColor"></circle>
+                  <circle cx="14.5" cy="11.5" r="0.8" fill="currentColor"></circle>
+                  <path d="M10 15c.6.6 1.4 1 2 1s1.4-.4 2-1"></path>
+                </svg>
+              </span>
+              <div class="packing-text">
+                <strong>Gosedjur</strong>
+                <small>Alice vill gärna att ditt favoritgosedjur hänger med</small>
+              </div>
+            </label>
+            <label class="packing-item">
+              <input type="checkbox" data-item="bottle" />
+              <span class="custom-checkbox"></span>
+              <span class="packing-svg" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M10 2h4v3h-4zM8 5h8a2 2 0 012 2v13a2 2 0 01-2 2H8a2 2 0 01-2-2V7a2 2 0 012-2z"
+                  ></path>
+                  <line x1="6" y1="12" x2="18" y2="12"></line>
+                </svg>
+              </span>
+              <div class="packing-text">
+                <strong>Vattenflaska</strong>
+                <small>Smidigt att ha vid bädden och under kvällen</small>
+              </div>
+            </label>
+            <label class="packing-item">
+              <input type="checkbox" data-item="toiletries" />
+              <span class="custom-checkbox"></span>
+              <span class="packing-svg" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M18 2l4 4-14 14H4v-4L18 2z"></path>
+                  <circle cx="18" cy="6" r="1.5"></circle>
+                </svg>
+              </span>
+              <div class="packing-text">
+                <strong>Tandborste &amp; necessär</strong>
+                <small>Tandborste, tandkräm och eventuella kvällsgrejer</small>
+              </div>
+            </label>
+          </div>
+          <p class="packing-counter" id="packingProgress">Packat: 0 av 5 saker</p>
+        </section>
+
+        <!-- Countdown -->
+        <section class="countdown-section">
+          <h2 class="section-heading">Sleepovern börjar om</h2>
+          <div class="countdown-grid" id="countdownTimer">
+            <div class="countdown-block">
+              <span class="count-num" id="days">00</span>
+              <span class="count-label">dagar</span>
+            </div>
+            <span class="count-sep">·</span>
+            <div class="countdown-block">
+              <span class="count-num" id="hours">00</span>
+              <span class="count-label">timmar</span>
+            </div>
+            <span class="count-sep">·</span>
+            <div class="countdown-block">
+              <span class="count-num" id="minutes">00</span>
+              <span class="count-label">minuter</span>
+            </div>
+            <span class="count-sep">·</span>
+            <div class="countdown-block">
+              <span class="count-num" id="seconds">00</span>
+              <span class="count-label">sekunder</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Weather / Autumn Atmosphere -->
+        <section class="weather-section">
+          <h2 class="section-heading">Höstmyset</h2>
+          <div class="weather-card">
+            <div class="weather-left">
+              <div class="weather-moon">
+                <svg
+                  viewBox="0 0 80 80"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="moon-svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M50 14 C30 14 16 28 16 48 C16 66 30 76 48 76 C55 76 61 74 66 70 C52 68 42 56 42 42 C42 28 50 18 64 15 C60 14 55 14 50 14 Z"
+                    fill="#facc15"
+                    opacity="0.95"
+                  />
+                  <circle cx="28" cy="22" r="1.5" fill="#fff" opacity="0.8" class="star-sparkle" />
+                  <circle cx="62" cy="32" r="1.2" fill="#fff" opacity="0.7" class="star-sparkle" />
+                  <circle cx="58" cy="62" r="1.8" fill="#fff" opacity="0.9" class="star-sparkle" />
                 </svg>
               </div>
-              <div class="map-tooltip">Hemma hos Alice</div>
+              <div class="weather-temp-wrap">
+                <span class="temp">9</span>
+                <span class="temp-deg">°C</span>
+              </div>
+            </div>
+            <div class="weather-right">
+              <p class="weather-desc">
+                Krispig oktoberkväll ute i Uppsala — men varmt, doftande av nygräddad pizza och 22°C
+                pyjamasvärme inne!
+              </p>
+              <div class="weather-pills">
+                <span class="pill">Krispig oktoberkväll</span>
+                <span class="pill">Varm pizzaugn</span>
+                <span class="pill">Inomhusmys &amp; kuddhav</span>
+              </div>
+              <p class="weather-note">Perfekt väder för varma tofflor, täcken och filmmys.</p>
             </div>
           </div>
-          <div class="location-info">
-            <p><strong>Hemma hos Alice</strong></p>
-            <p class="location-sub" id="locationAddress">Kvarnbogatan 36, Uppsala</p>
-            <p class="location-note">Bra plats för cyklar och enkel hämtning/lämning med bil utanför.</p>
-            <a href="https://maps.google.com/?q=Kvarnbogatan+36,+Uppsala" target="_blank" rel="noopener noreferrer" class="map-link">Öppna i Google Maps →</a>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section" id="rsvp">
+          <h2 class="section-heading">Anmäl dig</h2>
+          <p class="rsvp-lead">
+            Svara senast den <strong id="rsvpDeadline">10 oktober</strong> till
+            <span id="rsvpPhone">[Telefonnummer]</span> eller via formuläret nedan så vi hinner
+            förbereda pizzadeg, toppings och frukost.
+          </p>
+
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="field-group">
+              <label for="guestName">Ditt namn *</label>
+              <input type="text" id="guestName" required placeholder="T.ex. Maja Lindström" />
+            </div>
+
+            <input type="hidden" id="guestCount" value="1" />
+
+            <div class="field-group">
+              <label for="pizzaTopping">Vad vill du ha på din pizza? *</label>
+              <input
+                type="text"
+                id="pizzaTopping"
+                required
+                placeholder="T.ex. Mozzarella, skinka, champinjoner..."
+              />
+              <div class="suggestion-chips" id="pizzaChips" aria-label="Förslag på pizzatoppings">
+                <button type="button" class="chip-btn" data-target="pizzaTopping">
+                  Mozzarella
+                </button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">Skinka</button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">
+                  Champinjoner
+                </button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">Ananas</button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">Paprika</button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">Oliver</button>
+                <button type="button" class="chip-btn" data-target="pizzaTopping">
+                  Vegansk ost
+                </button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="breakfastChoice">Vad äter du helst till frukost? *</label>
+              <input
+                type="text"
+                id="breakfastChoice"
+                required
+                placeholder="T.ex. Pannkakor, rostat bröd, smoothie..."
+              />
+              <div class="suggestion-chips" id="breakfastChips" aria-label="Förslag på frukost">
+                <button type="button" class="chip-btn" data-target="breakfastChoice">
+                  Pannkakor
+                </button>
+                <button type="button" class="chip-btn" data-target="breakfastChoice">
+                  Rostat bröd
+                </button>
+                <button type="button" class="chip-btn" data-target="breakfastChoice">
+                  Yoghurt &amp; müsli
+                </button>
+                <button type="button" class="chip-btn" data-target="breakfastChoice">
+                  Fruktsallad
+                </button>
+                <button type="button" class="chip-btn" data-target="breakfastChoice">
+                  Smoothie
+                </button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="guestAllergies">Eventuella allergier eller specialkost</label>
+              <input
+                type="text"
+                id="guestAllergies"
+                placeholder="T.ex. Glutenfritt, laktosfritt, nötallergi, vegetariskt (eller 'Inga')"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="guestMessage">Hälsning till Alice (valfritt)</label>
+              <textarea
+                id="guestMessage"
+                rows="2"
+                placeholder="Önska en låt i Just Dance eller skriv ett meddelande"
+              ></textarea>
+            </div>
+
+            <div class="rsvp-error" id="rsvpError" style="display: none">
+              Något gick fel när vi försökte skicka anmälan. Försök igen eller kontakta Alice
+              direkt.
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Skicka anmälan</button>
+          </form>
+
+          <div class="success-message" id="successMessage" style="display: none">
+            <div class="success-icon" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="48"
+                height="48"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Hurra! Du är anmäld!</h3>
+            <p id="successDate">Vi ses lördagen den 17 oktober kl. 17:00 hos Alice!</p>
+            <div class="rsvp-summary" id="rsvpSummary"></div>
+            <button type="button" class="text-btn" id="resetBtn">Ändra mina val</button>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </article>
+        <!-- Location -->
+        <section class="location-section">
+          <h2 class="section-heading">Hitta hit</h2>
+          <div class="location-card">
+            <div class="map-area">
+              <div class="map-bg"></div>
+              <div class="map-grid-lines"></div>
+              <div class="map-roads">
+                <div class="road road-h"></div>
+                <div class="road road-v"></div>
+              </div>
+              <div class="map-marker-wrap">
+                <div class="map-marker-shadow"></div>
+                <div class="map-marker" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#c2410c"
+                    width="28"
+                    height="28"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3" fill="#ffffff"></circle>
+                  </svg>
+                </div>
+                <div class="map-tooltip">Hemma hos Alice</div>
+              </div>
+            </div>
+            <div class="location-info">
+              <p><strong>Hemma hos Alice</strong></p>
+              <p class="location-sub" id="locationAddress">Kvarnbogatan 36, Uppsala</p>
+              <p class="location-note">
+                Bra plats för cyklar och enkel hämtning/lämning med bil utanför.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Kvarnbogatan+36,+Uppsala"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-link"
+                >Öppna i Google Maps →</a
+              >
+            </div>
+          </div>
+        </section>
+      </article>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-ornament">✦ &nbsp; ✧ &nbsp; ✦</div>
-      <p>Alice &amp; familjen — Hemma hos Alice</p>
-      <p class="footer-note" id="footerDate">Lördag 17 okt kl. 17:00 – Söndag 18 okt kl. 11:00</p>
-    </footer>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-ornament">✦ &nbsp; ✧ &nbsp; ✦</div>
+        <p>Alice &amp; familjen — Hemma hos Alice</p>
+        <p class="footer-note" id="footerDate">Lördag 17 okt kl. 17:00 – Söndag 18 okt kl. 11:00</p>
+      </footer>
+    </main>
 
-  </main>
-
-  <script src="script.js?v=6"></script>
-</body>
+    <script src="script.js?v=6"></script>
+  </body>
 </html>
