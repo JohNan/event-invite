@@ -8,12 +8,12 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
-  <!-- Floating stars & night icons -->
+  <!-- Ambient floating starlight & slumber particles -->
   <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
 
   <main class="page-wrapper">
@@ -21,17 +21,17 @@
     <!-- Hero Section -->
     <header class="hero">
       <div class="hero-image-wrap">
-        <img src="hero-sleepover.jpg" alt="Mysig sleepover med kuddar, ljusslingor och hemlagad pizza" class="hero-img">
+        <img src="hero-cozy-sleepover.jpg?v=2" alt="Mysigt sovrum med ljusslingor, kuddhav, nattfönster och hembakad pizza" class="hero-img">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-icon">🍕</span>
-          <span>Sleepover & Pizzakväll</span>
+          <span>Sleepover &amp; Pizzakväll</span>
           <span class="badge-icon">✨</span>
         </div>
         <h1 class="hero-title">Sleepover med <em>Alice</em></h1>
-        <p class="hero-subtitle" id="heroSubtitle">Lördag 17 oktober – Söndag 18 oktober 2026</p>
+        <p class="hero-subtitle" id="heroSubtitle">Lördag 17 oktober (kl. 17:00) – Söndag 18 oktober (kl. 11:00)</p>
         <a href="#rsvp" class="hero-cta">OSA här &darr;</a>
       </div>
     </header>
@@ -92,13 +92,14 @@
         <div class="detail-item">
           <div class="detail-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="12 6 12 12 16 14"></polygon>
             </svg>
           </div>
           <div class="detail-text">
             <h3>Mat &amp; Frukost</h3>
             <p>Hemgjord Pizza &amp; Frukost</p>
-            <p class="detail-sub">Vi bakar tillsammans &amp; äter gott</p>
+            <p class="detail-sub">Egna toppings &amp; mysmorgon</p>
           </div>
         </div>
 
@@ -111,7 +112,7 @@
           <div class="detail-text">
             <h3>O.S.A.</h3>
             <p id="detailsRsvpDeadline">Senast 10 Oktober</p>
-            <p class="detail-sub">Svara i formuläret eller via SMS</p>
+            <p class="detail-sub">Svara i formuläret nedan</p>
           </div>
         </div>
       </section>
@@ -124,25 +125,25 @@
             <div class="program-time">17:00</div>
             <div class="program-badge">🍕 Pizzabakning</div>
             <h3>Vi bakar egna pizzor</h3>
-            <p>Vi rullar ut deg, breder tomatsås och toppar med alla våra personliga favoriter innan de åker in i ugnen!</p>
+            <p>Vi rullar ut deg, breder tomatsås och toppar med alla våra favoritingredienser innan de gräddas frasiga i ugnen!</p>
           </div>
           <div class="program-card">
             <div class="program-time">19:00</div>
             <div class="program-badge">💃 Just Dance</div>
             <h3>Dansutmaning &amp; skratt</h3>
-            <p>Vi drar igång Just Dance på storskärm och utmanar varandra i galna danssteg och sköna rytmer.</p>
+            <p>Vi drar igång Just Dance på storskärm och utmanar varandra i härliga dansmoves och favoritlåtar.</p>
           </div>
           <div class="program-card">
             <div class="program-time">20:30</div>
             <div class="program-badge">🎬 Filmmys</div>
             <h3>Kuddhav &amp; Pyjamas</h3>
-            <p>Kryp ner bland täcken, kuddar och gosedjur med varm popcornskål och en riktigt bra mysfilm.</p>
+            <p>Kryp ner bland täcken, kuddar och gosedjur med varma popcorn och en mysig film innan vi sover över.</p>
           </div>
           <div class="program-card">
             <div class="program-time">09:00</div>
             <div class="program-badge">🥞 Frukostmys</div>
             <h3>Gemensam lyxfrukost</h3>
-            <p>Morgonmys i pyjamas med härlig frukost innan vi rundar av och säger hejdå kl. 11:00 på söndagen.</p>
+            <p>Vi startar söndagen tillsammans i lugn och ro med favoritfrukost innan vi säger hejdå kl. 11:00.</p>
           </div>
         </div>
       </section>
@@ -150,7 +151,7 @@
       <!-- Packlista Section (Interactive) -->
       <section class="packing-section" id="packlista">
         <h2 class="section-heading">Packlista</h2>
-        <p class="packing-lead">Allt du behöver för en perfekt övernattning (kryssa i när du packat!):</p>
+        <p class="packing-lead">Allt du behöver för en bekväm sleepover (kryssa i när du packat ner det):</p>
         <div class="packing-checklist" id="packingChecklist">
           <label class="packing-item">
             <input type="checkbox" data-item="bedding">
@@ -158,7 +159,7 @@
             <span class="packing-icon">🛏️</span>
             <div class="packing-text">
               <strong>Täcke, kudde och lakan</strong>
-              <small>Så du sover mjukt och skönt i kuddhavet</small>
+              <small>För en mjuk och skön bäddning i kuddhavet</small>
             </div>
           </label>
           <label class="packing-item">
@@ -167,7 +168,7 @@
             <span class="packing-icon">🩱</span>
             <div class="packing-text">
               <strong>Pyjamas &amp; tofflor</strong>
-              <small>Bästa myskläderna för Just Dance och filmmys</small>
+              <small>Sköna myskläder för dans, film och nattsömn</small>
             </div>
           </label>
           <label class="packing-item">
@@ -185,7 +186,7 @@
             <span class="packing-icon">💧</span>
             <div class="packing-text">
               <strong>Vattenflaska</strong>
-              <small>Bra att ha vid sängen och under danspassen</small>
+              <small>Smidigt att ha vid sängen och under danspassen</small>
             </div>
           </label>
           <label class="packing-item">
@@ -194,7 +195,7 @@
             <span class="packing-icon">🪥</span>
             <div class="packing-text">
               <strong>Tandborste &amp; necessär</strong>
-              <small>Tandborste, tandkräm och eventuell hårborste</small>
+              <small>Tandborste, tandkräm och eventuella kvällsgrejer</small>
             </div>
           </label>
         </div>
@@ -229,12 +230,12 @@
 
       <!-- Weather / Autumn Atmosphere -->
       <section class="weather-section">
-        <h2 class="section-heading">Mysvädret</h2>
+        <h2 class="section-heading">Höstmyset</h2>
         <div class="weather-card">
           <div class="weather-left">
             <div class="weather-moon">
               <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="moon-svg" aria-hidden="true">
-                <path d="M50 14 C30 14 16 28 16 48 C16 66 30 76 48 76 C55 76 61 74 66 70 C52 68 42 56 42 42 C42 28 50 18 64 15 C60 14 55 14 50 14 Z" fill="#fbbf24" opacity="0.95"/>
+                <path d="M50 14 C30 14 16 28 16 48 C16 66 30 76 48 76 C55 76 61 74 66 70 C52 68 42 56 42 42 C42 28 50 18 64 15 C60 14 55 14 50 14 Z" fill="#facc15" opacity="0.95"/>
                 <circle cx="28" cy="22" r="2" fill="#fff" opacity="0.8" class="star-sparkle"/>
                 <circle cx="62" cy="32" r="1.5" fill="#fff" opacity="0.7" class="star-sparkle"/>
                 <circle cx="58" cy="62" r="2" fill="#fff" opacity="0.9" class="star-sparkle"/>
@@ -248,7 +249,7 @@
           <div class="weather-right">
             <p class="weather-desc">Krispig oktoberkväll ute i Uppsala — men varmt, doftande av nygräddad pizza och 22°C pyjamasvärme inne!</p>
             <div class="weather-pills">
-              <span class="pill">🍁 Krispig höstkväll</span>
+              <span class="pill">🍁 Krispig oktoberkväll</span>
               <span class="pill">🍕 Varm pizzaugn</span>
               <span class="pill">✨ 100% Inomhusmys</span>
             </div>
@@ -261,7 +262,7 @@
       <section class="rsvp-section" id="rsvp">
         <h2 class="section-heading">Anmäl dig</h2>
         <p class="rsvp-lead">
-          Svara senast den <strong id="rsvpDeadline">10 oktober</strong> till <span id="rsvpPhone">[Telefonnummer]</span> eller via formuläret nedan så vi hinner förbereda pizzadeg, toppings och frukost!
+          Svara senast den <strong id="rsvpDeadline">10 oktober</strong> till <span id="rsvpPhone">[Telefonnummer]</span> eller via formuläret nedan så vi hinner handla och förbereda pizzadeg, toppings och frukost!
         </p>
 
         <form class="rsvp-form" id="rsvpForm">
@@ -274,7 +275,7 @@
 
           <div class="field-group">
             <label for="pizzaTopping">Vad vill du ha på din pizza? 🍕 *</label>
-            <input type="text" id="pizzaTopping" required placeholder="T.ex. Skinka, mozzarella, champinjoner, ananas...">
+            <input type="text" id="pizzaTopping" required placeholder="T.ex. Mozzarella, skinka, champinjoner...">
             <div class="suggestion-chips" id="pizzaChips" aria-label="Förslag på pizzatoppings">
               <button type="button" class="chip-btn" data-target="pizzaTopping">Mozzarella</button>
               <button type="button" class="chip-btn" data-target="pizzaTopping">Skinka</button>
@@ -288,7 +289,7 @@
 
           <div class="field-group">
             <label for="breakfastChoice">Vad äter du helst till frukost? 🥞 *</label>
-            <input type="text" id="breakfastChoice" required placeholder="T.ex. Pannkakor, rostat bröd med ost, smoothie, flingor...">
+            <input type="text" id="breakfastChoice" required placeholder="T.ex. Pannkakor, rostat bröd, smoothie...">
             <div class="suggestion-chips" id="breakfastChips" aria-label="Förslag på frukost">
               <button type="button" class="chip-btn" data-target="breakfastChoice">Pannkakor</button>
               <button type="button" class="chip-btn" data-target="breakfastChoice">Rostat bröd</button>
@@ -305,7 +306,7 @@
 
           <div class="field-group">
             <label for="guestMessage">Hälsning till Alice (valfritt) 💌</label>
-            <textarea id="guestMessage" rows="2" placeholder="Önska en favoritlåt i Just Dance eller skriv ett glatt hej!"></textarea>
+            <textarea id="guestMessage" rows="2" placeholder="Önska en låt i Just Dance eller skriv ett glatt hej!"></textarea>
           </div>
 
           <div class="rsvp-error" id="rsvpError" style="display:none">
@@ -361,6 +362,6 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
