@@ -1,5 +1,5 @@
 {
-  "name": "alice-sleepover-invitation",
+  "name": "event-invite",
   "version": "1.0.0",
   "description": "En modern och interaktiv inbjudningssida för Alices Sleepover & Pizzakväll.",
   "main": "index.html",
