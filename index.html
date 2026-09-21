@@ -3,78 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alices 10-Års Fest — 16 Augusti 2026</title>
-  <meta name="description" content="Du är hjärtligt välkommen till Alices katt-inspirerade 10-årsfest den 16 augusti kl 14:00 på Kvarnbogatan 36 i Uppsala.">
+  <title>🍕 Sleepover med Alice ✨ — 17–18 Oktober 2026</title>
+  <meta name="description" content="Du är varmt välkommen till Alices Sleepover & Pizzakväll! Vi bakar pizza, kör Just Dance och avslutar med filmmys och övernattning den 17–18 oktober.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Floating petals -->
-  <div class="petals-container" id="petalsContainer"></div>
+  <!-- Floating stars & night icons -->
+  <div class="stars-container" id="starsContainer" aria-hidden="true"></div>
 
   <main class="page-wrapper">
     
     <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
       <div class="hero-image-wrap">
-        <img src="hero.jpg" alt="En söt katt omgiven av blommor" class="hero-img">
+        <img src="hero-sleepover.jpg" alt="Mysig sleepover med kuddar, ljusslingor och hemlagad pizza" class="hero-img">
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-eyebrow">En inbjudan till</p>
-        <h1 class="hero-title">Alices <em>Katt</em>fest</h1>
-        <p class="hero-subtitle" id="heroSubtitle">10 år — 16 Augusti 2026</p>
+        <div class="hero-badge">
+          <span class="badge-icon">🍕</span>
+          <span>Sleepover & Pizzakväll</span>
+          <span class="badge-icon">✨</span>
+        </div>
+        <h1 class="hero-title">Sleepover med <em>Alice</em></h1>
+        <p class="hero-subtitle" id="heroSubtitle">Lördag 17 oktober – Söndag 18 oktober 2026</p>
         <a href="#rsvp" class="hero-cta">OSA här &darr;</a>
       </div>
-    </section>
+    </header>
 
     <!-- Invitation Body -->
     <article class="invitation-body">
 
-      <!-- Intro Text -->
+      <!-- Intro Section -->
       <section class="intro-section">
-        <div class="divider"><span>✦</span></div>
+        <div class="divider">
+          <span>✨</span>
+          <span>🍕</span>
+          <span>🌙</span>
+        </div>
         <p class="intro-text">
-          Välkommen på en varm sensommareftermiddag fylld av mjukhet,<br>
-          kattlek och vänskap — Alice fyller jättestora tio år!
+          Vi kickar igång kvällen med att baka egna pizzor, utmanar varandra i Just Dance och avslutar med filmmys och övernattning!
         </p>
-        <div class="divider"><span>✦</span></div>
+        <p class="intro-sign">Vi ses! 🤍</p>
+        <div class="divider">
+          <span>✦</span>
+          <span>✦</span>
+          <span>✦</span>
+        </div>
       </section>
 
       <!-- Details Grid -->
-      <section class="details-section">
+      <section class="details-section" aria-label="Tid och plats">
         <div class="detail-item">
-          <div class="detail-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <div class="detail-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
           </div>
           <div class="detail-text">
-            <h3>Datum</h3>
-            <p id="detailsDate">Söndag, 16 Augusti 2026</p>
-            <p class="detail-sub" id="detailsTime">Kl. 14:00 — 16:00</p>
+            <h3>När</h3>
+            <p id="detailsDate">Lördag 17 – Söndag 18 Okt</p>
+            <p class="detail-sub" id="detailsTime">Kl. 17:00 (lör) – 11:00 (sön)</p>
           </div>
         </div>
 
         <div class="detail-item">
-          <div class="detail-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div class="detail-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
           </div>
           <div class="detail-text">
-            <h3>Plats</h3>
-            <p>Kvarnbogatan 36</p>
-            <p class="detail-sub">Kungsgärdet, Uppsala</p>
+            <h3>Var</h3>
+            <p>Hemma hos Alice</p>
+            <p class="detail-sub" id="detailsAddress">Kvarnbogatan 36, Uppsala</p>
           </div>
         </div>
 
+        <div class="detail-item">
+          <div class="detail-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div class="detail-text">
+            <h3>Mat &amp; Frukost</h3>
+            <p>Hemgjord Pizza &amp; Frukost</p>
+            <p class="detail-sub">Vi bakar tillsammans &amp; äter gott</p>
+          </div>
+        </div>
 
+        <div class="detail-item">
+          <div class="detail-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <div class="detail-text">
+            <h3>O.S.A.</h3>
+            <p id="detailsRsvpDeadline">Senast 10 Oktober</p>
+            <p class="detail-sub">Svara i formuläret eller via SMS</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Program / Highlights Section -->
+      <section class="program-section">
+        <h2 class="section-heading">Kvällens Höjdpunkter</h2>
+        <div class="program-grid">
+          <div class="program-card">
+            <div class="program-time">17:00</div>
+            <div class="program-badge">🍕 Pizzabakning</div>
+            <h3>Vi bakar egna pizzor</h3>
+            <p>Vi rullar ut deg, breder tomatsås och toppar med alla våra personliga favoriter innan de åker in i ugnen!</p>
+          </div>
+          <div class="program-card">
+            <div class="program-time">19:00</div>
+            <div class="program-badge">💃 Just Dance</div>
+            <h3>Dansutmaning &amp; skratt</h3>
+            <p>Vi drar igång Just Dance på storskärm och utmanar varandra i galna danssteg och sköna rytmer.</p>
+          </div>
+          <div class="program-card">
+            <div class="program-time">20:30</div>
+            <div class="program-badge">🎬 Filmmys</div>
+            <h3>Kuddhav &amp; Pyjamas</h3>
+            <p>Kryp ner bland täcken, kuddar och gosedjur med varm popcornskål och en riktigt bra mysfilm.</p>
+          </div>
+          <div class="program-card">
+            <div class="program-time">09:00</div>
+            <div class="program-badge">🥞 Frukostmys</div>
+            <h3>Gemensam lyxfrukost</h3>
+            <p>Morgonmys i pyjamas med härlig frukost innan vi rundar av och säger hejdå kl. 11:00 på söndagen.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packlista Section (Interactive) -->
+      <section class="packing-section" id="packlista">
+        <h2 class="section-heading">Packlista</h2>
+        <p class="packing-lead">Allt du behöver för en perfekt övernattning (kryssa i när du packat!):</p>
+        <div class="packing-checklist" id="packingChecklist">
+          <label class="packing-item">
+            <input type="checkbox" data-item="bedding">
+            <span class="custom-checkbox"></span>
+            <span class="packing-icon">🛏️</span>
+            <div class="packing-text">
+              <strong>Täcke, kudde och lakan</strong>
+              <small>Så du sover mjukt och skönt i kuddhavet</small>
+            </div>
+          </label>
+          <label class="packing-item">
+            <input type="checkbox" data-item="pajamas">
+            <span class="custom-checkbox"></span>
+            <span class="packing-icon">🩱</span>
+            <div class="packing-text">
+              <strong>Pyjamas &amp; tofflor</strong>
+              <small>Bästa myskläderna för Just Dance och filmmys</small>
+            </div>
+          </label>
+          <label class="packing-item">
+            <input type="checkbox" data-item="toy">
+            <span class="custom-checkbox"></span>
+            <span class="packing-icon">🧸</span>
+            <div class="packing-text">
+              <strong>Gosedjur</strong>
+              <small>Alice vill gärna att ditt favoritgosedjur hänger med</small>
+            </div>
+          </label>
+          <label class="packing-item">
+            <input type="checkbox" data-item="bottle">
+            <span class="custom-checkbox"></span>
+            <span class="packing-icon">💧</span>
+            <div class="packing-text">
+              <strong>Vattenflaska</strong>
+              <small>Bra att ha vid sängen och under danspassen</small>
+            </div>
+          </label>
+          <label class="packing-item">
+            <input type="checkbox" data-item="toiletries">
+            <span class="custom-checkbox"></span>
+            <span class="packing-icon">🪥</span>
+            <div class="packing-text">
+              <strong>Tandborste &amp; necessär</strong>
+              <small>Tandborste, tandkräm och eventuell hårborste</small>
+            </div>
+          </label>
+        </div>
+        <p class="packing-counter" id="packingProgress">Packat: 0 av 5 saker</p>
       </section>
 
       <!-- Countdown -->
       <section class="countdown-section">
-        <h2 class="section-heading">Kalaset börjar om</h2>
+        <h2 class="section-heading">Sleepovern börjar om</h2>
         <div class="countdown-grid" id="countdownTimer">
           <div class="countdown-block">
             <span class="count-num" id="days">00</span>
@@ -98,39 +227,32 @@
         </div>
       </section>
 
-      <!-- Weather -->
+      <!-- Weather / Autumn Atmosphere -->
       <section class="weather-section">
-        <h2 class="section-heading">Väderprognos</h2>
+        <h2 class="section-heading">Mysvädret</h2>
         <div class="weather-card">
           <div class="weather-left">
-            <div class="weather-sun">
-              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="sun-svg">
-                <circle cx="40" cy="40" r="18" fill="#c9a96e" opacity="0.9"/>
-                <g stroke="#c9a96e" stroke-width="3" stroke-linecap="round" opacity="0.6" class="sun-rays-svg">
-                  <line x1="40" y1="6"  x2="40" y2="14"/>
-                  <line x1="40" y1="66" x2="40" y2="74"/>
-                  <line x1="6"  y1="40" x2="14" y2="40"/>
-                  <line x1="66" y1="40" x2="74" y2="40"/>
-                  <line x1="16" y1="16" x2="22" y2="22"/>
-                  <line x1="58" y1="58" x2="64" y2="64"/>
-                  <line x1="64" y1="16" x2="58" y2="22"/>
-                  <line x1="22" y1="58" x2="16" y2="64"/>
-                </g>
+            <div class="weather-moon">
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="moon-svg" aria-hidden="true">
+                <path d="M50 14 C30 14 16 28 16 48 C16 66 30 76 48 76 C55 76 61 74 66 70 C52 68 42 56 42 42 C42 28 50 18 64 15 C60 14 55 14 50 14 Z" fill="#fbbf24" opacity="0.95"/>
+                <circle cx="28" cy="22" r="2" fill="#fff" opacity="0.8" class="star-sparkle"/>
+                <circle cx="62" cy="32" r="1.5" fill="#fff" opacity="0.7" class="star-sparkle"/>
+                <circle cx="58" cy="62" r="2" fill="#fff" opacity="0.9" class="star-sparkle"/>
               </svg>
             </div>
             <div class="weather-temp-wrap">
-              <span class="temp">21</span>
+              <span class="temp">9</span>
               <span class="temp-deg">°C</span>
             </div>
           </div>
           <div class="weather-right">
-            <p class="weather-desc">Historiskt sensommarväder i Uppsala — behagliga temperaturer, delvis soligt med lätt vind.</p>
+            <p class="weather-desc">Krispig oktoberkväll ute i Uppsala — men varmt, doftande av nygräddad pizza och 22°C pyjamasvärme inne!</p>
             <div class="weather-pills">
-              <span class="pill">☁️ Delvis molnigt</span>
-              <span class="pill">💨 Svag vind</span>
-              <span class="pill">🌡 Historiskt snitt</span>
+              <span class="pill">🍁 Krispig höstkväll</span>
+              <span class="pill">🍕 Varm pizzaugn</span>
+              <span class="pill">✨ 100% Inomhusmys</span>
             </div>
-            <p class="weather-note">Live-prognos visas en vecka innan kalaset.</p>
+            <p class="weather-note">Perfekt väder för varma tofflor, täcken och filmmys.</p>
           </div>
         </div>
       </section>
@@ -138,30 +260,67 @@
       <!-- RSVP Section -->
       <section class="rsvp-section" id="rsvp">
         <h2 class="section-heading">Anmäl dig</h2>
-        <p class="rsvp-lead">Svara gärna senast <strong id="rsvpDeadline">31 Juli (men gärna så snart som möjligt)</strong> — vi vill veta hur många kattungar som kommer!</p>
+        <p class="rsvp-lead">
+          Svara senast den <strong id="rsvpDeadline">10 oktober</strong> till <span id="rsvpPhone">[Telefonnummer]</span> eller via formuläret nedan så vi hinner förbereda pizzadeg, toppings och frukost!
+        </p>
 
         <form class="rsvp-form" id="rsvpForm">
           <div class="field-group">
-            <label for="guestName">Ditt namn</label>
+            <label for="guestName">Ditt namn *</label>
             <input type="text" id="guestName" required placeholder="T.ex. Maja Lindström">
           </div>
+
           <input type="hidden" id="guestCount" value="1">
+
           <div class="field-group">
-            <label for="guestNotes">Allergier eller övriga önskemål</label>
-            <textarea id="guestNotes" rows="3" placeholder="Laktosfri, nötallergi, vegetarisk — eller ett glatt meddelande till Alice!"></textarea>
+            <label for="pizzaTopping">Vad vill du ha på din pizza? 🍕 *</label>
+            <input type="text" id="pizzaTopping" required placeholder="T.ex. Skinka, mozzarella, champinjoner, ananas...">
+            <div class="suggestion-chips" id="pizzaChips" aria-label="Förslag på pizzatoppings">
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Mozzarella</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Skinka</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Champinjoner</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Ananas</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Paprika</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Oliver</button>
+              <button type="button" class="chip-btn" data-target="pizzaTopping">Vegansk ost</button>
+            </div>
           </div>
+
+          <div class="field-group">
+            <label for="breakfastChoice">Vad äter du helst till frukost? 🥞 *</label>
+            <input type="text" id="breakfastChoice" required placeholder="T.ex. Pannkakor, rostat bröd med ost, smoothie, flingor...">
+            <div class="suggestion-chips" id="breakfastChips" aria-label="Förslag på frukost">
+              <button type="button" class="chip-btn" data-target="breakfastChoice">Pannkakor</button>
+              <button type="button" class="chip-btn" data-target="breakfastChoice">Rostat bröd</button>
+              <button type="button" class="chip-btn" data-target="breakfastChoice">Yoghurt &amp; müsli</button>
+              <button type="button" class="chip-btn" data-target="breakfastChoice">Fruktsallad</button>
+              <button type="button" class="chip-btn" data-target="breakfastChoice">Smoothie</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="guestAllergies">Eventuella allergier eller specialkost 🥗</label>
+            <input type="text" id="guestAllergies" placeholder="T.ex. Glutenfritt, laktosfritt, nötallergi, vegetariskt (eller 'Inga')">
+          </div>
+
+          <div class="field-group">
+            <label for="guestMessage">Hälsning till Alice (valfritt) 💌</label>
+            <textarea id="guestMessage" rows="2" placeholder="Önska en favoritlåt i Just Dance eller skriv ett glatt hej!"></textarea>
+          </div>
+
           <div class="rsvp-error" id="rsvpError" style="display:none">
-            ⚠️ Något gick fel när vi försökte skicka anmälan. Försök igen eller kontakta oss direkt.
+            ⚠️ Något gick fel när vi försökte skicka anmälan. Försök igen eller kontakta Alice direkt.
           </div>
-          <button type="submit" class="submit-btn" id="submitBtn">Skicka anmälan</button>
+
+          <button type="submit" class="submit-btn" id="submitBtn">Skicka anmälan ✨</button>
         </form>
 
         <div class="success-message" id="successMessage" style="display:none">
-          <div class="success-paw">🐾</div>
-          <h3>Tack för din anmälan!</h3>
-          <p id="successDate">Vi ses söndagen den 16 Augusti kl. 14:00!</p>
+          <div class="success-icon">🍕✨🌙</div>
+          <h3>Hurra! Du är anmäld!</h3>
+          <p id="successDate">Vi ses lördagen den 17 oktober kl. 17:00 hos Alice!</p>
           <div class="rsvp-summary" id="rsvpSummary"></div>
-          <button type="button" class="text-btn" id="resetBtn">Ändra anmälan</button>
+          <button type="button" class="text-btn" id="resetBtn">Ändra mina val</button>
         </div>
       </section>
 
@@ -179,13 +338,13 @@
             <div class="map-marker-wrap">
               <div class="map-marker-shadow"></div>
               <div class="map-marker">📍</div>
-              <div class="map-tooltip">Kvarnbogatan 36</div>
+              <div class="map-tooltip">Hemma hos Alice</div>
             </div>
           </div>
           <div class="location-info">
-            <p><strong>Kvarnbogatan 36</strong></p>
-            <p class="location-sub">Kungsgärdet, Uppsala</p>
-            <p class="location-note">Parkering längs gatan. Cykelbana precis utanför.</p>
+            <p><strong>Hemma hos Alice</strong></p>
+            <p class="location-sub" id="locationAddress">Kvarnbogatan 36, Uppsala</p>
+            <p class="location-note">Bra plats för cyklar och enkel hämtning/lämning med bil utanför.</p>
             <a href="https://maps.google.com/?q=Kvarnbogatan+36,+Uppsala" target="_blank" rel="noopener noreferrer" class="map-link">Öppna i Google Maps →</a>
           </div>
         </div>
@@ -195,9 +354,9 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="footer-ornament">✦ &nbsp; 🐾 &nbsp; ✦</div>
-      <p>Alice & familjen — Kvarnbogatan 36, Uppsala</p>
-      <p class="footer-note" id="footerDate">16 Augusti 2026 · Kl. 14:00–16:00</p>
+      <div class="footer-ornament">✨ &nbsp; 🍕 &nbsp; 🌙 &nbsp; 🧸 &nbsp; ✨</div>
+      <p>Alice &amp; familjen — Hemma hos Alice</p>
+      <p class="footer-note" id="footerDate">Lördag 17 okt kl. 17:00 – Söndag 18 okt kl. 11:00</p>
     </footer>
 
   </main>

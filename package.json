@@ -1,7 +1,7 @@
 {
-  "name": "minion-birthday-invitation",
+  "name": "alice-sleepover-invitation",
   "version": "1.0.0",
-  "description": "En modern och interaktiv inbjudningssida för Minion-kalas.",
+  "description": "En modern och interaktiv inbjudningssida för Alices Sleepover & Pizzakväll.",
   "main": "index.html",
   "scripts": {
     "dev": "npx http-server -p 8080",
