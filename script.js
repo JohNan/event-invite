@@ -15,7 +15,7 @@ const PARTY_CONFIG = {
   rsvpDeadlineSwedish: '10 oktober',
   addressSwedish: 'Kvarnbogatan 36, Uppsala',
   phoneSwedish: '[Telefonnummer]',
-  descriptionSwedish: 'Du är varmt välkommen till Alices Sleepover & Pizzakväll! Vi bakar pizza, kör Just Dance och avslutar med filmmys och övernattning den 17–18 oktober.'
+  descriptionSwedish: 'Du är varmt välkommen till Alices Sleepover och pizzakväll! Vi bakar egna pizzor, utmanar varandra i Just Dance och avslutar med filmmys och övernattning den 17–18 oktober.'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * 1. Populate dynamic dates & text from configuration
  */
 function initCentralizedData() {
-  document.title = `🍕 Sleepover med Alice ✨ — ${PARTY_CONFIG.dateStringSwedish}`;
+  document.title = `Alices Sleepover — ${PARTY_CONFIG.dateStringSwedish}`;
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {
@@ -75,14 +75,14 @@ function initCentralizedData() {
 }
 
 /**
- * 2. Floating stars, moons, and pizza particles
+ * 2. Floating refined starlight particles
  */
 function initAmbientParticles() {
   const container = document.getElementById('starsContainer');
   if (!container) return;
 
-  const symbols = ['✨', '🍕', '🌙', '⭐', '💫', '🎶', '🧸'];
-  const count = 14;
+  const symbols = ['✦', '✧', '⋆', '·'];
+  const count = 16;
 
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
@@ -90,9 +90,9 @@ function initAmbientParticles() {
     el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
 
     el.style.left = `${Math.random() * 100}vw`;
-    el.style.fontSize = `${14 + Math.random() * 16}px`;
-    el.style.animationDelay = `${Math.random() * 12}s`;
-    el.style.animationDuration = `${14 + Math.random() * 16}s`;
+    el.style.fontSize = `${10 + Math.random() * 14}px`;
+    el.style.animationDelay = `${Math.random() * 14}s`;
+    el.style.animationDuration = `${16 + Math.random() * 18}s`;
 
     container.appendChild(el);
 
@@ -134,11 +134,11 @@ function initCountdown() {
       minutesEl.textContent = String(m).padStart(2, '0');
       secondsEl.textContent = String(s).padStart(2, '0');
     } else if (tillEnd > 0) {
-      if (heading) heading.textContent = 'Sleepovern pågår just nu! 🍕✨';
+      if (heading) heading.textContent = 'Sleepovern pågår just nu!';
       if (timerEl) {
         timerEl.innerHTML = `
-          <p style="font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:#fbbf24;text-align:center;padding:16px 0;">
-            Välkommen in — pizzorna gräddas, Just Dance är igång och filmmyset väntar! 🌙
+          <p style="font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:#facc15;text-align:center;padding:16px 0;">
+            Välkommen in — pizzorna gräddas, Just Dance är igång och filmmyset väntar!
           </p>`;
       }
       clearInterval(interval);
@@ -147,7 +147,7 @@ function initCountdown() {
       if (timerEl) {
         timerEl.innerHTML = `
           <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#cbd5e1;text-align:center;padding:16px 0;">
-            Tack alla för en helt magisk sleepover & filmmys! 🤍✨
+            Tack alla för en helt magisk sleepover och filmmys!
           </p>`;
       }
       clearInterval(interval);
@@ -191,11 +191,11 @@ function initPackingList() {
     });
 
     if (checkedCount === checkboxes.length) {
-      counter.textContent = `Allt packat och klart! 🎒✨ (${checkedCount} av ${checkboxes.length})`;
-      counter.style.color = '#059669';
+      counter.textContent = `Allt packat och klart! (${checkedCount} av ${checkboxes.length})`;
+      counter.style.color = '#15803d';
     } else {
       counter.textContent = `Packat: ${checkedCount} av ${checkboxes.length} saker`;
-      counter.style.color = '#b45309';
+      counter.style.color = '#9a3412';
     }
   }
 
@@ -309,10 +309,10 @@ function initRSVP() {
       count: 1,
       pizzaTopping: pizzaTopping || 'Valfritt',
       breakfastChoice: breakfastChoice || 'Alltätare',
-      allergies: allergies || 'Inga specifika allergier/specialkost',
+      allergies: allergies || 'Inga',
       message: message || '',
       // Backward-compatible compound field for Google Sheets:
-      notes: `🍕 Pizza: ${pizzaTopping || 'Valfritt'} | 🥞 Frukost: ${breakfastChoice || 'Alltätare'} | ⚠️ Allergier: ${allergies || 'Inga'} | 💬 Hälsning: ${message || '-'}`,
+      notes: `Pizza: ${pizzaTopping || 'Valfritt'} | Frukost: ${breakfastChoice || 'Alltätare'} | Allergier: ${allergies || 'Inga'} | Hälsning: ${message || '-'}`,
       timestamp: new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 19).replace('T', ' ')
     };
 
@@ -333,7 +333,6 @@ function initRSVP() {
         showSuccess(data);
       } catch (err) {
         console.error('RSVP submission error:', err);
-        // Save locally anyway and show success
         localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         showSuccess(data);
       } finally {
@@ -360,7 +359,7 @@ function initRSVP() {
   function setLoading(on) {
     if (!submitBtn) return;
     submitBtn.disabled = on;
-    submitBtn.textContent = on ? 'Skickar in…' : 'Skicka anmälan ✨';
+    submitBtn.textContent = on ? 'Skickar in…' : 'Skicka anmälan';
     submitBtn.style.opacity = on ? '0.7' : '1';
   }
 
@@ -369,10 +368,10 @@ function initRSVP() {
     success.style.display = 'block';
     summary.innerHTML = `
       <p><strong>Namn:</strong> ${esc(data.name)}</p>
-      <p><strong>🍕 Pizzatoppings:</strong> ${esc(data.pizzaTopping || 'Valfritt')}</p>
-      <p><strong>🥞 Frukost:</strong> ${esc(data.breakfastChoice || 'Alltätare')}</p>
-      <p><strong>🥗 Allergier / Specialkost:</strong> ${esc(data.allergies || 'Inga')}</p>
-      ${data.message ? `<p><strong>💌 Hälsning:</strong> ${esc(data.message)}</p>` : ''}
+      <p><strong>Pizzatoppings:</strong> ${esc(data.pizzaTopping || 'Valfritt')}</p>
+      <p><strong>Frukost:</strong> ${esc(data.breakfastChoice || 'Alltätare')}</p>
+      <p><strong>Allergier / Specialkost:</strong> ${esc(data.allergies || 'Inga')}</p>
+      ${data.message ? `<p><strong>Hälsning:</strong> ${esc(data.message)}</p>` : ''}
     `;
   }
 }
